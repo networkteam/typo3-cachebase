@@ -1,0 +1,29 @@
+{
+  "name": "networkteam/typo3-cachebase",
+  "type": "typo3-cms-extension",
+  "description": "It adds variables to the page cache identifier calculation for serving multiple versions of a webseite parallel. This is the case in container environments with rolling updates.",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "caching",
+    "container"
+  ],
+  "authors": [
+    {
+      "name": "networkteam",
+      "email": "typo3@networkteam.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Networkteam\\CacheBase\\": "Classes/"
+    }
+  },
+  "require": {
+    "typo3/cms-core": "^11.5 || ^12.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "networkteam_cachebase"
+    }
+  }
+}
