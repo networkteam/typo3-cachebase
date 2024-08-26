@@ -1,0 +1,11 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Networkteam\CacheBase\EventListener\BeforePageCacheIdentifierIsHashedEventListener:
+    tags:
+      -   name: event.listener
+          identifier: 'networkteamCachebaseEventListener'
+          event: TYPO3\CMS\Frontend\Event\BeforePageCacheIdentifierIsHashedEvent
