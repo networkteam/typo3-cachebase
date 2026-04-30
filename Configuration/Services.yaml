@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Networkteam\CacheBase\:
+    resource: '../Classes/*'
+
+  Networkteam\CacheBase\EventListener\PageCacheIdentifierEventListener:
+    tags:
+      - name: event.listener
+        identifier: 'networkteam/cachebase/page-cache-identifier'
