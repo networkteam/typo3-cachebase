@@ -8,8 +8,8 @@ class PageCacheIdentifierEventListener
 {
     public function __invoke(BeforePageCacheIdentifierIsHashedEvent $event): void
     {
-        $arguments = $event->getArguments();
-        $arguments['networkteam_cachebase'] = $GLOBALS['EXTCONF']['networkteam_cachebase']['keys'];
-        $event->setArguments($arguments);
+        $parameters = $event->getPageCacheIdentifierParameters();
+        $parameters['networkteam_cachebase'] = $GLOBALS['EXTCONF']['networkteam_cachebase']['keys'];
+        $event->setPageCacheIdentifierParameters($parameters);
     }
 }
